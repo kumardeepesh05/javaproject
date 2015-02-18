@@ -1,0 +1,87 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/style.css"></link>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" language="javascript">
+            function DisableBackButton() {
+                window.history.forward();
+            }
+            DisableBackButton();
+            window.onload = DisableBackButton;
+            window.onpageshow = function(evt) {
+                if (evt.persisted)
+                    DisableBackButton();
+            };
+            window.onunload = function() {
+                void (0);
+            };
+        </script>
+    </head>
+    <body>
+        <form action="PurchaseServlet" name="formPur" onsubmit="return checkPurchase();">
+            <center>
+                <div id="header">
+                    Purchase Page
+                </div>
+                <div class="inner-header" id="inner">
+                    <ul id="ul1">
+                        <li id="li1"><a id="a1" href="Welcome.jsp">Home</a></li>
+                        <li id="li1"><a id="a1" href="Compare.html">Compare</a></li>
+                        <li id="li1"><a id="a1" href="Seller.html">Sell</a></li>
+                        <li id="li1"><a id="a1" href="Purchase.html">Purchase</a></li>
+                        <li id="li1"><a id="a1" href="Contact.html">Contact</a></li>
+                        <li id="li1"><a id="a1" href="Feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div id="root" class="div1" style="height: 300px">
+                    <h3 style="color: #87CEFA">Click Button Given Below To Be Shown All Cars:</h3><br/><br/>
+                    <table>
+                        <tr>
+                            <td id="td1"><label id="label">Price Range</label></td>
+                            <td>
+                                <select id="select1" name="pricelist">
+                                    <option>---select---</option>
+                                    <option>below 1 lakh</option>
+                                    <option>1-2 lakh</option>
+                                    <option>2-3 lakh</option>
+                                    <option>3-4 lakh</option>
+                                    <option>4-8 lakh</option>
+                                    <option>8-12 lakh</option>
+                                    <option>12-20 lakh</option>
+                                    <option>20-30 lakh</option>
+                                    <option>above 30 lakh</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td1"><label id="label">Fuel Type</label></td>
+                            <td>
+                                <select id="select1" name="fuellist">
+                                    <option>---select---</option>
+                                    <option>Diesel</option>
+                                    <option>Petrol</option>
+                                    <option>LPG</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">New Cars<strong>*</strong></label></td>
+                            <td><input class="btn" id="button" type="submit" name="newcar" value="New"/></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Old Cars<strong>*</strong></label></td>
+                            <td><input class="btn" id="button" type="submit" name="oldcar" value="Old"/></td>
+                        </tr>                        
+                    </table>                                               
+                </div>
+            </center>
+        </form>
+    </body>
+</html>

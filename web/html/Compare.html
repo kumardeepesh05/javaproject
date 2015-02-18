@@ -1,0 +1,127 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Project-Comparison</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/style.css"></link>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" language="javascript">
+            function DisableBackButton() {
+                window.history.forward();
+            }
+            DisableBackButton();
+            window.onload = DisableBackButton;
+            window.onpageshow = function(evt) {
+                if (evt.persisted)
+                    DisableBackButton();
+            };
+            window.onunload = function() {
+                void (0);
+            }
+        </script>
+    </head>
+    <body>
+        <form name="formComp" action="DisplayServlet" onsubmit="return checkCompare();">
+            <center>
+                <div id="header">
+                    Comparison Cars
+                </div>
+                <div class="inner-header" id="inner">
+                    <ul id="ul1">
+                        <li id="li1"><a id="a1" href="Welcome.jsp">Home</a></li>
+                        <li id="li1"><a id="a1" href="Compare.html">Compare</a></li>
+                        <li id="li1"><a id="a1" href="Seller.html">Sell</a></li>
+                        <li id="li1"><a id="a1" href="Purchase.html">Purchase</a></li>
+                        <li id="li1"><a id="a1" href="Contact.html">Contact</a></li>
+                        <li id="li1"><a id="a1" href="Feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="div3" id="root">
+                    <!--<img id="img2" src="img/car.jpg"/>-->
+                    <img src="img/com.jpg" id="img3"/>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="div4">
+                                    <table>
+                                        <tr>
+                                            <td id="td1"><label id="label">Car-1</label></td>
+                                            <td>
+                                                <select id="select1" name="carbrand1">
+                                                    <option>--Brand--</option>
+                                                    <option value="53">Ashok Leyland</option>
+                                                    <option value="49">Aston Martin</option>
+                                                    <option value="18">Audi</option>
+                                                    <option value="1">BMW</option>
+                                                    <option value="47">Bugatti</option>
+                                                    <option value="56">Datsun</option>
+                                                    <option value="33">Ferrari</option>
+                                                    <option value="50">Force Motors</option>
+                                                    <option value="5">Ford</option>
+                                                    <option value="7">Honda</option>
+                                                    <option value="8">Hyundai</option>
+                                                    <option value="9">Mahindra</option>
+                                                    <option value="10">Maruti</option>
+                                                    <option value="16">Tata</option>
+                                                    <option value="17">Toyota</option>
+                                                    <option value="37">Volvo</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select id="select1" name="carmodel1">
+                                                    <option>--Model--</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="div4">
+                                    <table>
+                                        <tr>
+                                            <td id="td1"><label id="label">Car-2</label></td>
+                                            <td>
+                                                <select id="select1" name="carbrand2">
+                                                    <option>--Brand--</option>
+                                                    <option value="53">Ashok Leyland</option>
+                                                    <option value="49">Aston Martin</option>
+                                                    <option value="18">Audi</option>
+                                                    <option value="1">BMW</option>
+                                                    <option value="47">Bugatti</option>
+                                                    <option value="56">Datsun</option>
+                                                    <option value="33">Ferrari</option>
+                                                    <option value="50">Force Motors</option>
+                                                    <option value="5">Ford</option>
+                                                    <option value="7">Honda</option>
+                                                    <option value="8">Hyundai</option>
+                                                    <option value="9">Mahindra</option>
+                                                    <option value="10">Maruti</option>
+                                                    <option value="16">Tata</option>
+                                                    <option value="17">Toyota</option>
+                                                    <option value="37">Volvo</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select id="select1" name="carmodel1">
+                                                    <option>--Model--</option>                                                    
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>                                              
+                    </table><br/>
+                    <input id="button" type="submit" value="Compare" name="compare"/>
+                </div>                
+            </center>
+        </form>
+    </body>
+</html>

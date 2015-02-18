@@ -1,0 +1,78 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/style.css"></link>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" language="javascript">
+            function DisableBackButton() {
+                window.history.forward();
+            }
+            DisableBackButton();
+            window.onload = DisableBackButton;
+            window.onpageshow = function(evt) {
+                if (evt.persisted)
+                    DisableBackButton();
+            };
+            window.onunload = function() {
+                void (0);
+            }
+        </script>
+    </head>
+    <body>
+        <form name="formFeed" action="FeedbackServlet" onsubmit="return checkFeedback();" method="post">
+            <center>
+                <div id="header">
+                    Feedback Page
+                </div>
+                <div class="inner-header" id="inner">
+                    <ul id="ul1">
+                        <li id="li1"><a id="a1" href="Welcome.jsp">Home</a></li>
+                        <li id="li1"><a id="a1" href="Compare.html">Compare</a></li>
+                        <li id="li1"><a id="a1" href="Seller.html">Sell</a></li>
+                        <li id="li1"><a id="a1" href="Purchase.html">Purchase</a></li>
+                        <li id="li1"><a id="a1" href="Contact.html">Contact</a></li>
+                        <li id="li1"><a id="a1" href="Feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div id="root" class="div2">
+                    <table>
+                        <tr>
+                            <td><label id="label">Name<strong>*</strong></label></td>
+                            <td><input type="text" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Email<strong>*</strong></label></td>
+                            <td><input type="text" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Mobile<strong>*</strong></label></td>
+                            <td><input type="text" name="mobile"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">City<strong>*</strong></label></td>
+                            <td><input type="text" name="city"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">State<strong>*</strong></label></td>
+                            <td><input type="text" name="state"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Comment<strong>*</strong></label></td>
+                            <td>
+                                <textarea name="comment" rows="4" cols="1" style="width: 150px;">
+                                </textarea>
+                            </td>
+                        </tr>
+                    </table><br/>
+                    <input id="button" type="submit" name="register" value="Submit"/>                              
+                </div>   
+            </center>            
+        </form>
+    </body>
+</html>

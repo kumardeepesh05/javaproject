@@ -1,0 +1,106 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/style.css"></link>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" language="javascript">
+            function DisableBackButton() {
+                window.history.forward();
+            }
+            DisableBackButton();
+            window.onload = DisableBackButton;
+            window.onpageshow = function(evt) {
+                if (evt.persisted)
+                    DisableBackButton();
+            };
+            window.onunload = function() {
+                void (0);
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form1" onsubmit="return checkSeller();" action="SellerServlet" method="post">
+            <center>
+                <div id="header">
+                    Seller Page
+                </div>
+                <div class="inner-header" id="inner">
+                    <ul id="ul1">
+                        <li id="li1"><a id="a1" href="Welcome.jsp">Home</a></li>
+                        <li id="li1"><a id="a1" href="Compare.html">Compare</a></li>
+                        <li id="li1"><a id="a1" href="Seller.html">Sell</a></li>
+                        <li id="li1"><a id="a1" href="Purchase.html">Purchase</a></li>
+                        <li id="li1"><a id="a1" href="Contact.html">Contact<a></li>
+                        <li id="li1"><a id="a1" href="Feedback.html">Feedback<a></li>
+                    </ul>
+                </div>
+                <div id="root" class="div2">
+                    <table>
+                        <tr>
+                            <td><label class="label1" id="label">Brand<strong>*</strong></label></td>
+                            <td><input type="text" name="brand"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Model<strong>*</strong></label></td>
+                            <td><input type="text" name="model"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Price<strong>*</strong></label></td>
+                            <td><input type="text" name="price"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Fuel<strong>*</strong></label></td>
+                            <td>
+                                <select id="select2" name="fuel">
+                                    <option>---select---</option>
+                                    <option>Diesel</option>
+                                    <option>Petrol</option>
+                                    <option>LPG</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Image<span style="font-size: 10px; color: goldenrod"><br/>(100*100)</span></label></td>
+                            <td><input type="file" name="photo"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Mileage<strong>*</strong><span style="font-size: 10px; color: goldenrod"><br/>(KMPL)</span></label></td>
+                            <td><input type="text" name="mileage"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Fuel<span style="font-size: 10px; color: goldenrod">(Ltr)</span> Capacity<strong>*</strong></label></td>
+                            <td><input type="text" name="fuelcap"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Seat Capacity<strong>*</strong></label></td>
+                            <td><input type="text" name="seatcap"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Engine Description<strong>*</strong></label></td>
+                            <td><input type="text" name="engine"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Max Power<strong>*</strong></label></td>
+                            <td><input type="text" name="power"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Max Torque<strong>*</strong></label></td>
+                            <td><input type="text" name="torque"></td>
+                        </tr>
+                        <tr>
+                            <td><label id="label">Additional Feature</label></td>
+                            <td><input type="text" name="feature"></td>
+                        </tr>
+                    </table><br/>
+                    <input id="button" type="submit" name="register" value="Add Car"/>                    
+                </div> 
+            </center>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Project-Contact</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/style.css"></link>
+        <script type="text/javascript" language="javascript">
+            function DisableBackButton() {
+                window.history.forward();
+            }
+            DisableBackButton();
+            window.onload = DisableBackButton;
+            window.onpageshow = function(evt) {
+                if (evt.persisted)
+                    DisableBackButton();
+            };
+            window.onunload = function() {
+                void (0);
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <center>
+                <div id="header">
+                    Contact Details
+                </div>
+                <div class="inner-header" id="inner">
+                    <ul id="ul1">
+                        <li id="li1"><a id="a1" href="Welcome.jsp">Home</a></li>
+                        <li id="li1"><a id="a1" href="Compare.html">Compare</a></li>
+                        <li id="li1"><a id="a1" href="Seller.html">Sell</a></li>
+                        <li id="li1"><a id="a1" href="Purchase.html">Purchase</a></li>
+                        <li id="li1"><a id="a1" href="Contact.html">Contact</a></li>
+                        <li id="li1"><a id="a1" href="Feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="div3" id="root"><br/><br/>
+                    <table>
+                        <tr>
+                            <td id="td3">Name:</td>
+                            <td id="td3">Deepesh Kumar</td>
+                        </tr>
+                        <tr>
+                            <td id="td3">Email:</td>
+                            <td id="td3">Kumardeepesh05@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td id="td3">Contact No.:</td>
+                            <td id="td3">9461024553</td>
+                        </tr>
+                        <tr>
+                            <td id="td3">Address:</td>
+                            <td id="td3">Apex Institute of Management and Science, V.T. Road, Jaipur</td>
+                        </tr>
+                    </table>              
+                </div>
+            </center>
+        </form>
+    </body>
+</html>
